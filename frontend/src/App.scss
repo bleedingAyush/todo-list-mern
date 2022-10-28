@@ -1,0 +1,143 @@
+@use "constants/variables" as *;
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-ms-reveal {
+  color: white;
+}
+.App,
+:root,
+body,
+html {
+  min-height: 100vh;
+}
+
+.App {
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  position: relative;
+  min-height: 65vh;
+  width: 30%;
+  max-width: 400px;
+  border-radius: 6px;
+  background-color: $card-bg-color;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 0px 19px 2px rgba(32, 75, 230, 0.25);
+}
+
+h3 {
+  left: 8%;
+  top: -0.2rem;
+  position: absolute;
+}
+
+.add-todo {
+  width: 85%;
+  height: 3rem;
+  background: #2b2b2b;
+  box-shadow: 0px 4px 6px 1px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  color: $white;
+  outline: none;
+  border: none;
+  padding-left: 1rem;
+  font-size: 1.1rem;
+  padding-right: 3rem;
+}
+
+.input-container {
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 2.5rem;
+  margin-top: 3.7rem;
+  margin-bottom: 0.5rem;
+}
+
+.add-todo-btn {
+  position: absolute;
+  right: 12%;
+  top: 28%;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
+}
+
+.todo-container {
+  max-height: 32.5ch;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+  padding: 0.5rem 0rem;
+}
+
+.logout-container {
+  position: absolute;
+  right: 6%;
+  top: 0.8rem;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(63, 63, 63);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: max(65vh, 250px);
+}
+
+@media (max-width: 998px) {
+  .card {
+    width: 50%;
+  }
+}
+
+@media (max-width: 700px) {
+  .card {
+    width: 65%;
+  }
+}
+
+@media (max-width: 500px) {
+  .card {
+    width: 85%;
+  }
+}
