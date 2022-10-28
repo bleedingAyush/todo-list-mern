@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "client": "cd frontend && npm start",
-    "start": "nodemon server.js"
+    "start": "nodemon server.js",
+    "install-packages": "npm install && npm install --prefix frontend"
   },
   "author": "Ayush Kumar",
   "license": "ISC",
